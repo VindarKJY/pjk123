@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Video Spesial Untukmu!</title>
+    <style>
+        body {
+            background: #000;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+        }
+        .video-container {
+            text-align: center;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="video-container">
+        <h2>Loading video spesial akan datang...</h2>
+        <div id="countdown">3</div>
+    </div>
+
+    <script>
+        let count = 3;
+        const countdown = document.getElementById('countdown');
+        
+        const timer = setInterval(() => {
+            count--;
+            countdown.textContent = count;
+            
+            if (count === 0) {
+                clearInterval(timer);
+                window.location.href = "https://youtu.be/9cflMV0DdJE";
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
