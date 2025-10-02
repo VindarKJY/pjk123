@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Viendar Faza Prasetya - Portfolio</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Efek partikel background -->
+    <div class="particles" id="particles"></div>
+
+    <!-- Efek glow -->
+    <div class="glow glow-1"></div>
+    <div class="glow glow-2"></div>
+
+    <div class="container">
+      <div class="img-container">
+        <a href="index2.html" target="_blank" class="profile-link">
+          <img
+          src="image/foto_profile-removebg-preview.png"
+          alt="Viendar Faza Prasetya"
+          class="profile-img transparent-bg"
+        />
+        </a>
+      </div>
+
+      <div class="text-center">
+        <div class="text-content">
+          <h1 class="text-title">Viendar Faza Prasetya</h1>
+          <p class="text-subtitle">
+            <span class="highlight">Web Developer</span> |
+            <span class="highlight">UI/UX Designer</span> |
+            <span class="highlight">Frontend Developer</span>
+          </p>
+          <p class="text-subtitle">
+            Saya seorang profesional di bidang pengembangan web dengan fokus
+            pada pembuatan pengalaman digital yang menarik dan fungsional.
+            Menggabungkan estetika desain dengan teknologi terkini.
+          </p>
+
+          <div class="social-links">
+            <a
+              href="https://www.instagram.com/viendarfaza/"
+              class="btn-modern instagram"
+              target="_blank"
+            >
+              <i class="fab fa-instagram"></i>
+              Instagram
+            </a>
+            <a
+              href="https://github.com/VindarKJY"
+              class="btn-modern github"
+              target="_blank"
+            >
+              <i class="fab fa-github"></i>
+              GitHub
+            </a>
+            <a
+              href="mailto:avin.viendarfaza@gmail.com"
+              class="btn-modern email"
+            >
+              <i class="far fa-envelope"></i>
+              Email
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Membuat partikel background
+      document.addEventListener("DOMContentLoaded", function () {
+        const particlesContainer = document.getElementById("particles");
+        const particleCount = 30;
+
+        for (let i = 0; i < particleCount; i++) {
+          const particle = document.createElement("div");
+          particle.classList.add("particle");
+
+          // Ukuran acak
+          const size = Math.random() * 5 + 2;
+          particle.style.width = `${size}px`;
+          particle.style.height = `${size}px`;
+
+          // Posisi acak
+          particle.style.left = `${Math.random() * 100}%`;
+
+          // Animasi dengan delay acak
+          particle.style.animationDelay = `${Math.random() * 15}s`;
+
+          // Warna acak
+          const colors = [
+            "rgba(168, 192, 255, 0.5)",
+            "rgba(255, 255, 255, 0.3)",
+            "rgba(200, 220, 255, 0.4)",
+          ];
+          particle.style.background =
+            colors[Math.floor(Math.random() * colors.length)];
+
+          particlesContainer.appendChild(particle);
+        }
+      });
+    </script>
+  </body>
+</html>
